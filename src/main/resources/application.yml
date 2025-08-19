@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://db.umsmzcsbtrdspjobfjjm.supabase.co:5432/postgres?sslmode=require
+    username: postgres
+    password: ${SUPABASE_DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.spatial.dialect.postgis.PostgisPG10Dialect
+  flyway:
+    enabled: false
