@@ -29,6 +29,7 @@ public class PlaceController {
 			throw new IllegalArgumentException("radiusKm must be between 0 and 50");
 		if (limit <= 0 || limit > 100)
 			throw new IllegalArgumentException("limit must be between 1 and 100");
+
 		return repo.findNearby(lat, lon, radiusKm, limit);
 	}
 }
